@@ -1,0 +1,145 @@
+:root {
+    --bg: #f4f4f4;
+    --text: #111;
+    --card: #ffffff;
+    --accent: #00adb5;
+}
+
+body.dark {
+    --bg: #121212;
+    --text: #ffffff;
+    --card: #1e1e1e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    scroll-behavior: smooth;
+    transition: 0.3s;
+}
+
+/* Navbar */
+header {
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+}
+
+.logo {
+    color: var(--accent);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+}
+
+#theme-toggle {
+    background: none;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Hero */
+.hero {
+    height: 90vh;
+    background: linear-gradient(to right, #000, #222);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero span {
+    color: var(--accent);
+}
+
+.btn {
+    margin: 10px;
+    padding: 10px 25px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.secondary {
+    background: transparent;
+    border: 2px solid var(--accent);
+}
+
+/* Sections */
+section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.skills span {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    background: var(--accent);
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.skills span:hover {
+    transform: scale(1.1);
+}
+
+.project-card {
+    background: var(--card);
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
